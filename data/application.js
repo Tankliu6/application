@@ -55,13 +55,6 @@ function appear7(){
     console.log("appear");
 }
 
-function appear8(){
-    // 取得標籤Quest
-    let answer8=document.querySelector("#moveAnswerQ8");
-    // 利用標籤打開下方空白格
-    answer8.style.display="block";
-    console.log("appear");
-}
 
 function disappear1(){
     let answer1=document.querySelector("#moveAnswerQ1");
@@ -102,11 +95,5 @@ function disappear6(){
 function disappear7(){
     let answer7=document.querySelector("#moveAnswerQ7");
     answer7.style.display="none";
-    console.log("disappear");
-}
-
-function disappear8(){
-    let answer8=document.querySelector("#moveAnswerQ8");
-    answer8.style.display="none";
     console.log("disappear");
 }
