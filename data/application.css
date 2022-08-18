@@ -17,7 +17,7 @@ html{
     background-color: rgba(0, 204, 255, 0.574);
     border-radius: 10px;
     padding:5px;
-    margin-right: 10%;margin-left: 10%;
+    margin-right: 5%;margin-left: 5%;
 }
 
 /* title 字型 */
@@ -28,6 +28,9 @@ html{
 
 
 #titletext{
+    display: flex;
+    align-items: center; /* 垂直置中 */
+    justify-content: center; /* 水平置中 */
     margin-bottom: 5px;
     margin-left: 5px;margin-right: 5px;
     text-align:center;font-size: 25px;
@@ -49,13 +52,14 @@ html{
     justify-content: center; /* 水平置中 */
     align-items: center; /* 垂直靠中 */
     background-color: rgb(28, 6, 38);
-    margin-right:10%;margin-left:10%;
+    margin-right:5%;margin-left:5%;
     border-radius: 5px;padding-top: 5px;padding-bottom: 10px;
+    font-size: 25px;
 }
 
 .Quest{
-    width:auto;background-color: rgba(152, 250, 242, 0.546);
-    font-size: 16px;
+    background-color: rgba(152, 250, 242, 0.546);
+    font-size: 0.8em; /* 20px */
     font-family: Fontradious;
     border-radius: 5px;
     margin-right:10%;margin-left:10%;margin-top: 25px;margin-bottom: 20px;
@@ -76,7 +80,7 @@ html{
 /* 回答文字 */
 #answertext{
     word-wrap: break-word;word-break: break-all; /* 避免文字超出底框 */
-    font-size: 15px;
+    font-size: 0.8em; 
     text-decoration-line: underline; /* 底線 */
     text-decoration-color: rgb(205, 134, 20); /* 底線顏色 */
     text-decoration-style: dashed;
@@ -86,8 +90,18 @@ html{
     color:rgba(0, 0, 0, 0.997);
 }
 
-ul{
-    padding-right: 5px;
+#answertextBox{
+    padding-left:10%;padding-right: 10%;
+    padding-top: 5%;padding-bottom: 5%;
+}
+
+#space{
+    margin-left: 10px;
+}
+/* 段落間隔 */
+#textBottom{
+    margin-bottom: 10px;
+    font-family: Arial,"Microsoft JhengHei",sans-serif;
 }
 
 /* 頁尾footer */
@@ -95,7 +109,7 @@ ul{
     background-color: azure;
     text-align: center;
     padding: 10px;
-    margin-left: 10%;margin-right: 10%;
+    margin-left: 5%;margin-right: 5%;
 }
 
 /* 頁尾文字 */
@@ -111,32 +125,38 @@ img{
     margin:2px;
 }
 
-/* 頁首RWD用BOX，RWD要寫在最後面，避免被前面的CSS覆蓋無法顯示 */
+#pinkP{
+    max-width: 100%;
+    width:60px;
+}
+
+/* RWD要寫在最後面，避免被前面的CSS覆蓋無法顯示 */
 @media (max-width:432px){
     #pinkP{
      display:none;
     }
 }
 
+@media (max-width:800px){
+    .Quest{
+        font-size: 18px;
+    }
+}
+
 @media (max-width:500px){
     .Quest{
-        font-size: 14px;
-    }
-    #answertext{
-        font-size: 12px;
+        font-size: 15px;
     }
 }
 
-@media (max-width:365px){
-    #titletext{
-        margin-bottom: 5px;
-        margin-left: 5px;margin-right: 5px;
-        text-align:center;font-size: 20px;
-        font-family:Fontradious,serif;
-        color: azure;
-    }
+@media (max-width:375px){
     .Quest{
         font-size: 12px;
     }
 }
 
+@media (min-width:1000px){
+    .Quest{
+        font-size: 23px;
+    }
+}
